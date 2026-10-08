@@ -5,63 +5,71 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <link rel="canonical" href="https://www.parasolia.fr/">
 <title>Parasolia</title>
-<meta name="description" content="Parasolia — parasols Scolaro et stores bannes coffre Brustor, distributeur exclusif en Languedoc-Roussillon. Devis gratuit, réponse sous 48 h.">
+<meta name="description" content="Parasolia — voiles d'ombrage sur mesure, parasols Scolaro et stores bannes coffre Brustor, distributeur exclusif en Languedoc-Roussillon. Visite technique et étude sur mesure sous 48 h.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 -8 156 126%22%3E%3Ccircle cx=%2290%22 cy=%2224%22 r=%2230%22 fill=%22%23FAB03E%22/%3E%3Cpath d=%22M26 48 L150 44 L58 100 Z%22 fill=%22%23CBB08B%22/%3E%3Cpath d=%22M6 46 L50 18 L120 18 L156 46 L120 42 L84 46 L48 42 Z%22 fill=%22%23102F2D%22/%3E%3Crect x=%2218%22 y=%2242%22 width=%226%22 height=%2274%22 fill=%22%23102F2D%22/%3E%3Crect x=%22132%22 y=%2260%22 width=%225.5%22 height=%2256%22 fill=%22%23102F2D%22/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Figtree:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap">
 <style>
-/* Layout : vitrine une page, structure Scolaro (nav produits → engagements → familles → stores coffre → parcours → devis/RDV), motif de rayures de toile */
+/* Layout : vitrine une page, identité du logo Parasolia (vert profond, soleil orange, voile sable), motif arc de soleil */
 :root{
-  --bg:#F6F8F7;        /* blanc lumière, biais vert d'eau */
+  --bg:#F8F7F0;        /* crème du logo */
   --surface:#FFFFFF;
-  --ink:#0F2A2E;       /* bleu étang profond */
-  --muted:#557074;
-  --line:#D7E2E0;
-  --sea:#0E4A52;       /* bleu de Thau */
-  --sun:#E9A23B;       /* ocre soleil */
+  --ink:#102F2D;       /* vert profond du logo */
+  --muted:#5B6B66;
+  --line:#E4E0D3;
+  --sea:#102F2D;       /* couleur de marque (vert) */
+  --deep:#0B2321;
+  --sun:#FAB03E;       /* soleil du logo */
   --sun-ink:#3A2405;
-  --sky:#CFE6E8;
-  --stripe-a:#0E4A52;
-  --stripe-b:#F3EDE2;
-  --f-display:"Bricolage Grotesque", "Avenir Next", "Segoe UI", system-ui, sans-serif;
-  --f-body:"Figtree", "Helvetica Neue", Arial, system-ui, sans-serif;
-  --r:14px;
+  --sand:#CBB08B;      /* voile du logo */
+  --sky:#EFE7D8;       /* sable clair */
+  --stripe-a:#102F2D;
+  --stripe-b:#CBB08B;
+  --f-display:"Outfit", "Avenir Next", "Segoe UI", system-ui, sans-serif;
+  --f-body:"Outfit", "Helvetica Neue", Arial, system-ui, sans-serif;
+  --r:16px;
   --max:1180px;
 }
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
-  --bg:#0B1A1D;--surface:#11262A;--ink:#E8F1EF;--muted:#9DB6B7;--line:#21403F;
-  --sea:#5FB3BC;--sun:#F0B451;--sun-ink:#2A1902;--sky:#163A3F;--stripe-a:#1C5A62;--stripe-b:#E6DCC8;color-scheme:dark}}
+  --bg:#0C1B1A;--surface:#132826;--ink:#EDEFE8;--muted:#A9B8B2;--line:#24403D;
+  --sea:#9FD3C4;--deep:#081514;--sun:#FAB03E;--sun-ink:#2A1902;--sand:#CBB08B;--sky:#1B3532;--stripe-a:#9FD3C4;--stripe-b:#CBB08B;color-scheme:dark}}
 :root[data-theme="dark"]{
-  --bg:#0B1A1D;--surface:#11262A;--ink:#E8F1EF;--muted:#9DB6B7;--line:#21403F;
-  --sea:#5FB3BC;--sun:#F0B451;--sun-ink:#2A1902;--sky:#163A3F;--stripe-a:#1C5A62;--stripe-b:#E6DCC8;color-scheme:dark}
+  --bg:#0C1B1A;--surface:#132826;--ink:#EDEFE8;--muted:#A9B8B2;--line:#24403D;
+  --sea:#9FD3C4;--deep:#081514;--sun:#FAB03E;--sun-ink:#2A1902;--sand:#CBB08B;--sky:#1B3532;--stripe-a:#9FD3C4;--stripe-b:#CBB08B;color-scheme:dark}
 
+[hidden]{display:none!important}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
-body{background:var(--bg);color:var(--ink);font:400 16px/1.6 var(--f-body);-webkit-font-smoothing:antialiased}
+body{background:var(--bg);color:var(--ink);font:400 17px/1.6 var(--f-body);-webkit-font-smoothing:antialiased}
 a{color:inherit}
 img{max-width:100%;display:block}
-h1,h2,h3{font-family:var(--f-display);line-height:1.05;margin:0;text-wrap:balance;letter-spacing:-.02em}
+h1,h2,h3{font-family:var(--f-display);font-weight:600;line-height:1.05;margin:0;text-wrap:balance;letter-spacing:-.025em}
 p{margin:0}
 .wrap{max-width:var(--max);margin-inline:auto;padding-inline:20px}
 .eyebrow{font:600 12px/1 var(--f-body);letter-spacing:.14em;text-transform:uppercase;color:var(--sea)}
 :focus-visible{outline:3px solid var(--sun);outline-offset:3px;border-radius:6px}
 
-/* bande de toile */
-.awning{height:14px;background:repeating-linear-gradient(90deg,var(--stripe-a) 0 34px,var(--stripe-b) 34px 68px);
-  -webkit-mask:radial-gradient(17px 10px at 17px 0,#000 98%,transparent) 0 0/34px 14px repeat-x;mask:radial-gradient(17px 10px at 17px 0,#000 98%,transparent) 0 0/34px 14px repeat-x}
-
+/* séparateur arc de soleil */
+.awning{height:46px;background:radial-gradient(60px 60px at 50% 100%,var(--sun) 0 22px,transparent 23px),linear-gradient(var(--sand),var(--sand)) center bottom/100% 2px no-repeat}
 /* top bar + nav */
 .topbar{background:var(--sea);color:var(--bg);font-size:13px}
 .topbar .wrap{display:flex;gap:18px;justify-content:space-between;align-items:center;padding-block:8px;flex-wrap:wrap}
 .topbar b{color:var(--sun)}
 header.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
-header.nav .wrap{display:flex;align-items:center;gap:24px;padding-block:14px}
-.logo{display:flex;align-items:center;gap:10px;text-decoration:none}
-.logo svg{width:34px;height:34px;flex:none}
-.logo span{font:800 24px/1 var(--f-display);letter-spacing:-.03em}
-.logo small{display:block;font:500 10px/1.2 var(--f-body);letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-top:3px}
-nav.links{display:flex;gap:22px;margin-left:auto;font-weight:600;font-size:15px}
+header.nav .wrap{display:flex;align-items:center;gap:24px;padding-block:18px}
+.logo{--lg-ink:#102F2D;--lg-sun:#FAB03E;--lg-sand:#CBB08B;display:flex;align-items:center;gap:14px;text-decoration:none;color:var(--lg-ink)}
+.logo .mark{width:116px;height:88px;flex:none}
+.logo .word{display:block;font:600 56px/1 "Outfit","Bricolage Grotesque",system-ui,sans-serif;letter-spacing:-.025em;color:var(--lg-ink);white-space:nowrap}
+.logo .o{display:inline-block;width:.56em;height:.56em;vertical-align:-.02em;margin:0 .01em}
+.logo small{display:block;white-space:nowrap;font:500 11.5px/1.2 "Outfit",var(--f-body);letter-spacing:.2em;text-transform:uppercase;color:var(--lg-ink);margin-top:7px;opacity:.85}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .logo{--lg-ink:#E8F1EF}}
+:root[data-theme="dark"] .logo{--lg-ink:#E8F1EF}
+@media (max-width:980px){.logo .mark{width:86px;height:65px}.logo .word{font-size:42px}.logo small{font-size:9.5px;letter-spacing:.14em}}
+@media (max-width:560px){header.nav .wrap{padding-block:10px}.logo{gap:8px}.logo .mark{width:64px;height:48px}.logo .word{font-size:31px}.logo small{display:none}}
+nav.links{display:flex;gap:22px;margin-left:auto;font-weight:600;font-size:15px;white-space:nowrap}
+header.nav .btn{white-space:nowrap}
 nav.links a{text-decoration:none;opacity:.85}
 nav.links a:hover{opacity:1;color:var(--sea)}
 .btn{display:inline-flex;align-items:center;gap:8px;border:0;cursor:pointer;text-decoration:none;font:700 15px/1 var(--f-body);padding:14px 20px;border-radius:999px;transition:transform .15s,box-shadow .15s}
@@ -69,26 +77,29 @@ nav.links a:hover{opacity:1;color:var(--sea)}
 .btn-sun:hover{transform:translateY(-1px);box-shadow:0 8px 20px -8px var(--sun)}
 .btn-ghost{background:transparent;color:var(--ink);border:1.5px solid var(--line)}
 .btn-ghost:hover{border-color:var(--sea);color:var(--sea)}
+header.nav .wrap{max-width:1380px}
+@media (max-width:1340px){nav.links{display:none}header.nav .btn{margin-left:auto}}
+@media (max-width:700px){header.nav .btn{display:none}}
 @media (max-width:900px){nav.links{display:none}header.nav .btn{margin-left:auto;padding:11px 15px;font-size:14px}}
 
 /* hero */
 .hero{padding-block:56px 40px}
 .hero .wrap{display:grid;grid-template-columns:1.05fr 1fr;gap:48px;align-items:center}
-.hero h1{font-size:clamp(40px,6.2vw,78px);font-weight:800}
+.hero h1{font-size:clamp(40px,6vw,76px);font-weight:600}
 .hero h1 em{font-style:normal;color:var(--sea);position:relative;white-space:nowrap}
 .hero h1 em::after{content:"";position:absolute;left:0;right:0;bottom:.06em;height:.16em;background:var(--sun);z-index:-1;border-radius:4px}
 .hero .lede{font-size:19px;color:var(--muted);max-width:52ch;margin-top:22px}
 .hero .ctas{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
 .hero .brands{display:flex;gap:26px;margin-top:34px;align-items:center;flex-wrap:wrap;color:var(--muted);font-size:14px}
 .hero .brands strong{display:block;color:var(--ink);font:700 18px/1.1 var(--f-display)}
-.hero-vis{position:relative;aspect-ratio:4/5;max-width:100%;border-radius:220px 220px var(--r) var(--r);overflow:hidden;background:linear-gradient(180deg,var(--sky),var(--bg))}
+.hero-vis{position:relative;aspect-ratio:4/5;max-width:100%;border-radius:999px 999px var(--r) var(--r);overflow:hidden;background:var(--sky);outline:10px solid color-mix(in srgb,var(--sun) 35%,transparent);outline-offset:-10px}
 .hero-vis .badge48{position:absolute;left:18px;bottom:18px;background:var(--surface);border-radius:var(--r);padding:14px 18px;box-shadow:0 18px 40px -20px rgba(0,0,0,.35);display:flex;gap:12px;align-items:center;z-index:2}
-.badge48 b{font:800 34px/1 var(--f-display);color:var(--sea)}
-.badge48 span{font-size:13px;line-height:1.3;color:var(--muted)}
+.badge48 b{flex:none;display:grid;place-items:center;width:52px;height:52px;border-radius:50%;background:var(--sun);color:var(--sun-ink);font:700 17px/1 var(--f-display)}
+.badge48 span{font-size:14px;font-weight:500;line-height:1.3;color:var(--ink)}
 @media (max-width:900px){.hero .wrap{grid-template-columns:1fr}.hero-vis{aspect-ratio:5/4;border-radius:160px 160px var(--r) var(--r)}}
 
 /* visual slot : illustration + photo par-dessus si disponible */
-.vis{position:relative;overflow:hidden;background:linear-gradient(180deg,var(--sky) 0%,var(--bg) 100%)}
+.vis{position:relative;overflow:hidden;background:var(--sky)}
 .vis>svg{position:absolute;inset:0;width:100%;height:100%}
 .vis>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 
@@ -108,7 +119,7 @@ nav.links a:hover{opacity:1;color:var(--sea)}
 
 section.block{padding-block:72px}
 .sec-head{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap;margin-bottom:32px}
-.sec-head h2{font-size:clamp(32px,4.4vw,52px);font-weight:800;margin-top:10px;max-width:18ch}
+.sec-head h2{font-size:clamp(32px,4.4vw,52px);font-weight:600;margin-top:10px;max-width:18ch}
 .sec-head p{color:var(--muted);max-width:46ch}
 
 /* familles Scolaro */
@@ -134,6 +145,52 @@ section.block{padding-block:72px}
 .ins figcaption span{font-size:13px;opacity:.85}
 @media (max-width:900px){.inspire{grid-template-columns:repeat(2,1fr)}}
 
+/* voiles d'ombrage */
+.sails-sec{background:linear-gradient(180deg,var(--bg),color-mix(in srgb,var(--sky) 55%,var(--bg)))}
+.gallery{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:170px;gap:10px;margin-bottom:28px}
+.gallery .g{margin:0;position:relative;border-radius:12px;overflow:hidden}
+.gallery .g.big{grid-column:span 2;grid-row:span 2}
+.gallery .vis{position:absolute;inset:0}
+.gallery figcaption{position:absolute;left:10px;bottom:10px;z-index:2;background:rgba(6,24,27,.72);color:#fff;font-size:12px;font-weight:600;padding:5px 10px;border-radius:999px}
+.ranges{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.range{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:26px;display:flex;flex-direction:column;gap:12px;min-width:0}
+.range h3{font-size:26px;font-weight:600}
+.range p{color:var(--muted)}
+.range-hl{background:var(--sea);border-color:transparent;color:var(--bg)}
+.range-hl .eyebrow{color:var(--sun)}
+.range-hl p{color:color-mix(in srgb,var(--bg) 80%,transparent)}
+.range-hl .btn{align-self:flex-start;margin-top:auto}
+.sizes{width:100%;border-collapse:collapse;font-size:15px;margin-top:4px}
+.sizes th{text-align:left;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);padding:6px 0;border-bottom:1px solid var(--line)}
+.sizes td{padding:12px 0;border-bottom:1px solid var(--line);vertical-align:middle;font-variant-numeric:tabular-nums}
+.sizes td:first-child{font-weight:700;white-space:nowrap;padding-right:12px}
+.sizes svg{width:30px;height:24px;vertical-align:middle;margin-right:8px}
+.ticks{list-style:none;margin:0;padding:0;display:grid;gap:9px}
+.ticks li{position:relative;padding-left:26px;font-size:15px}
+.ticks li::before{content:"";position:absolute;left:0;top:4px;width:16px;height:16px;border-radius:50%;background:var(--sun)}
+.specs{display:grid;grid-template-columns:1.2fr 1fr;gap:18px;margin-top:18px}
+.spec-col{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:26px;min-width:0}
+.spec-col h3{font-size:22px;font-weight:600;margin-bottom:14px}
+.feat{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.feat li{display:flex;flex-direction:column;gap:2px;border-left:3px solid var(--sun);padding-left:12px}
+.feat b{font:700 16px/1.2 var(--f-display);color:var(--sea)}
+.feat span{font-size:14px;color:var(--muted)}
+.colors{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:12px 16px}
+.colors li{display:flex;align-items:center;gap:8px;font-size:14px;font-weight:600}
+.sw{width:26px;height:26px;border-radius:50%;border:2px solid var(--line);flex:none}
+.guide{margin-top:18px;background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:30px}
+.guide h3{font-size:30px;font-weight:600;margin:8px 0 18px}
+.guide-cols{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.guide h4{font:700 18px/1.2 var(--f-display);margin:0 0 6px;color:var(--sea)}
+.guide p{color:var(--muted);margin-bottom:18px;max-width:62ch}
+.promo{background:var(--sun);color:var(--sun-ink);border-radius:var(--r);padding:22px 26px;display:flex;gap:20px;align-items:center;flex-wrap:wrap;margin-top:14px;position:relative;overflow:hidden}
+.promo svg.p-ico{width:86px;height:64px;flex:none}
+.promo div{flex:1;min-width:220px}
+.promo b{display:block;font:700 24px/1.1 var(--f-display)}
+.promo p{font-size:15px;margin-top:4px}
+.promo .btn{background:var(--ink);color:var(--bg)}
+@media (max-width:900px){.gallery{grid-template-columns:repeat(2,1fr);grid-auto-rows:140px}.ranges,.specs,.guide-cols{grid-template-columns:1fr}}
+@media (max-width:480px){.feat{grid-template-columns:1fr}.guide{padding:22px}}
 /* Brustor */
 .brustor{background:var(--sea);color:var(--bg)}
 .brustor .eyebrow{color:var(--sun)}
@@ -142,7 +199,7 @@ section.block{padding-block:72px}
 .coffre{background:color-mix(in srgb,var(--bg) 7%,transparent);border:1px solid color-mix(in srgb,var(--bg) 18%,transparent);border-radius:var(--r);overflow:hidden;display:flex;flex-direction:column}
 .coffre .vis{aspect-ratio:16/10}
 .coffre .body{padding:20px;display:flex;flex-direction:column;gap:8px;flex:1}
-.coffre h3{font-size:24px;font-weight:800}
+.coffre h3{font-size:24px;font-weight:600}
 .coffre h3 small{font:600 12px/1 var(--f-body);letter-spacing:.12em;text-transform:uppercase;color:var(--sun);display:block;margin-bottom:6px}
 .coffre p{font-size:15px;color:color-mix(in srgb,var(--bg) 80%,transparent)}
 .coffre .chip{background:color-mix(in srgb,var(--sun) 20%,transparent);color:var(--sun)}
@@ -156,7 +213,7 @@ section.block{padding-block:72px}
 /* parcours */
 .steps{display:grid;grid-template-columns:repeat(5,1fr);gap:0;counter-reset:s;position:relative}
 .step{padding:0 16px 0 0;position:relative}
-.step .n{width:46px;height:46px;border-radius:50%;background:var(--surface);border:2px solid var(--sea);display:grid;place-items:center;font:800 18px/1 var(--f-display);color:var(--sea);position:relative;z-index:1}
+.step .n{width:46px;height:46px;border-radius:50%;background:var(--surface);border:2px solid var(--sea);display:grid;place-items:center;font:700 18px/1 var(--f-display);color:var(--sea);position:relative;z-index:1}
 .step::before{content:"";position:absolute;top:22px;left:46px;right:0;height:2px;background:repeating-linear-gradient(90deg,var(--sea) 0 8px,transparent 8px 14px)}
 .step:last-child::before{display:none}
 .step h3{font-size:18px;font-weight:700;margin-top:16px}
@@ -164,7 +221,7 @@ section.block{padding-block:72px}
 .step.hl .n{background:var(--sun);border-color:var(--sun);color:var(--sun-ink)}
 .contact-card{margin-top:36px;display:flex;gap:20px;align-items:center;background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:22px 24px;flex-wrap:wrap}
 .contact-card .av{display:flex}
-.contact-card .av span{width:52px;height:52px;border-radius:50%;display:grid;place-items:center;font:800 18px/1 var(--f-display);background:var(--sky);color:var(--sea);border:3px solid var(--surface)}
+.contact-card .av span{width:52px;height:52px;border-radius:50%;display:grid;place-items:center;font:700 18px/1 var(--f-display);background:var(--sky);color:var(--sea);border:3px solid var(--surface)}
 .contact-card .av span+span{margin-left:-14px;background:var(--sun);color:var(--sun-ink)}
 .contact-card p{flex:1;min-width:240px;color:var(--muted)}
 .contact-card p b{color:var(--ink)}
@@ -174,11 +231,11 @@ section.block{padding-block:72px}
 .zone{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
 .depts{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-top:22px}
 .dept{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 10px;text-align:center}
-.dept b{display:block;font:800 26px/1 var(--f-display);color:var(--sea);font-variant-numeric:tabular-nums}
+.dept b{display:block;font:700 26px/1 var(--f-display);color:var(--sea);font-variant-numeric:tabular-nums}
 .dept span{font-size:12px;color:var(--muted)}
-.excl{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:28px;position:relative;overflow:hidden}
+.excl{background:var(--surface);border:1px solid var(--line);border-top:4px solid var(--sun);border-radius:var(--r);padding:28px;position:relative;overflow:hidden}
 .excl .awning{position:absolute;top:0;left:0;right:0}
-.excl h3{font-size:28px;font-weight:800;margin-top:12px}
+.excl h3{font-size:28px;font-weight:600;margin-top:12px}
 .excl ul{margin:16px 0 0;padding:0;list-style:none;display:grid;gap:10px}
 .excl li{display:flex;gap:10px;align-items:flex-start}
 .excl li::before{content:"";width:18px;height:18px;flex:none;margin-top:3px;border-radius:50%;background:var(--sun) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%233A2405' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12l5 5 9-10'/%3E%3C/svg%3E") center/12px no-repeat}
@@ -188,11 +245,11 @@ section.block{padding-block:72px}
 .devis{background:linear-gradient(180deg,var(--bg),var(--sky))}
 .devis-box{display:grid;grid-template-columns:.9fr 1.1fr;gap:0;background:var(--surface);border-radius:24px;overflow:hidden;border:1px solid var(--line);box-shadow:0 30px 60px -40px rgba(14,74,82,.45)}
 .devis-side{background:var(--sea);color:var(--bg);padding:36px;display:flex;flex-direction:column;gap:18px}
-.devis-side h2{font-size:clamp(30px,3.6vw,44px);font-weight:800}
+.devis-side h2{font-size:clamp(30px,3.6vw,44px);font-weight:600}
 .devis-side p{color:color-mix(in srgb,var(--bg) 80%,transparent)}
-.big48{display:flex;align-items:baseline;gap:10px;margin-top:auto}
-.big48 b{font:800 88px/.9 var(--f-display);color:var(--sun);letter-spacing:-.04em}
-.big48 span{font-weight:600}
+.big48{display:flex;align-items:center;gap:16px;margin-top:auto;padding-top:18px;border-top:1px solid color-mix(in srgb,var(--bg) 20%,transparent)}
+.big48 b{flex:none;display:grid;place-items:center;width:76px;height:76px;border-radius:50%;background:var(--sun);color:var(--sun-ink);font:700 26px/1 var(--f-display);letter-spacing:-.02em}
+.big48 span{font-size:15px;font-weight:500;line-height:1.35}
 .devis-side .mail{font-weight:700;user-select:all}
 form{padding:32px 36px;display:grid;grid-template-columns:1fr 1fr;gap:16px}
 .tabs{grid-column:1/-1;display:flex;background:var(--bg);border-radius:999px;padding:5px;gap:4px}
@@ -226,8 +283,8 @@ footer h4{font:700 13px/1 var(--f-body);letter-spacing:.14em;text-transform:uppe
 footer ul{list-style:none;margin:0;padding:0;display:grid;gap:8px;font-size:14px;opacity:.85}
 footer a{text-decoration:none}
 footer .legal{border-top:1px solid color-mix(in srgb,var(--bg) 15%,transparent);margin-top:36px;padding-top:18px;font-size:12px;opacity:.65;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
-footer .logo span{color:var(--bg)}
-footer .logo small{color:color-mix(in srgb,var(--bg) 60%,transparent)}
+footer .logo{--lg-ink:var(--bg)}
+
 @media (max-width:800px){footer .cols{grid-template-columns:1fr 1fr}}
 
 .mobile-cta{display:none}
@@ -239,71 +296,73 @@ footer .logo small{color:color-mix(in srgb,var(--bg) 60%,transparent)}
 <!-- Illustrations de repli (affichées si la photo n'est pas disponible) -->
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <defs>
-    <pattern id="stripes" width="40" height="10" patternUnits="userSpaceOnUse"><rect style="fill:var(--stripe-a)" width="20" height="10"/><rect style="fill:var(--stripe-b)" x="20" width="20" height="10"/></pattern>
+    <pattern id="stripes" width="40" height="10" patternUnits="userSpaceOnUse"><rect width="40" height="10" style="fill:var(--sand)"/></pattern>
     <symbol id="i-central" viewBox="0 0 400 300">
-      <circle style="fill:var(--sun)" cx="320" cy="62" r="26" opacity=".9"/>
-      <rect style="fill:var(--line)" x="0" y="250" width="400" height="50"/>
-      <path d="M70 120 Q200 30 330 120 Z" fill="url(#stripes)"/>
-      <path style="stroke:var(--stripe-a)" d="M70 120 Q200 30 330 120" fill="none" stroke-width="4"/>
-      <path style="fill:var(--stripe-a)" d="M70 120 q16 14 32 0 q16 14 32 0 q16 14 32 0 q16 14 32 0 q16 14 32 0 q16 14 32 0 q16 14 32 0 q16 14 32 0 Z"/>
-      <rect style="fill:var(--ink)" x="197" y="70" width="6" height="182"/>
-      <rect style="fill:var(--ink)" x="170" y="246" width="60" height="10" rx="3"/>
-      <rect style="fill:var(--muted)" x="140" y="200" width="120" height="8" rx="3"/>
-      <rect style="fill:var(--muted)" x="150" y="208" width="6" height="42"/><rect style="fill:var(--muted)" x="244" y="208" width="6" height="42"/>
+      <circle cx="300" cy="78" r="46" style="fill:var(--sun)"/>
+      <rect x="0" y="252" width="400" height="48" style="fill:var(--sand)" opacity=".45"/>
+      <path d="M86 130 L160 84 L240 84 L314 130 L240 122 L200 132 L160 122 Z" style="fill:var(--sea)"/>
+      <rect x="196" y="120" width="8" height="132" rx="3" style="fill:var(--sea)"/>
+      <rect x="172" y="246" width="56" height="8" rx="3" style="fill:var(--sea)"/>
+      <rect x="128" y="204" width="144" height="8" rx="3" style="fill:var(--sand)"/>
     </symbol>
     <symbol id="i-deporte" viewBox="0 0 400 300">
-      <circle style="fill:var(--sun)" cx="70" cy="60" r="24" opacity=".9"/>
-      <rect style="fill:var(--line)" x="0" y="250" width="400" height="50"/>
-      <path style="stroke:var(--ink)" d="M300 60 L300 252" stroke-width="8"/>
-      <path style="stroke:var(--ink)" d="M300 70 Q240 66 210 92" fill="none" stroke-width="5"/>
-      <path d="M100 140 Q210 60 320 140 Z" fill="url(#stripes)"/>
-      <path style="fill:var(--stripe-a)" d="M100 140 q15 12 30 0 q15 12 30 0 q15 12 30 0 q15 12 30 0 q15 12 30 0 q15 12 30 0 q15 12 30 0 Z"/>
-      <path style="stroke:var(--ink)" d="M270 252 h60 M300 252 l-40 -6 M300 252 l40 -6" stroke-width="7" stroke-linecap="round"/>
-      <rect style="fill:var(--muted)" x="120" y="212" width="110" height="8" rx="3"/>
-      <rect style="fill:var(--muted)" x="130" y="220" width="6" height="32"/><rect style="fill:var(--muted)" x="214" y="220" width="6" height="32"/>
+      <circle cx="210" cy="86" r="52" style="fill:var(--sun)"/>
+      <rect x="0" y="252" width="400" height="48" style="fill:var(--sand)" opacity=".45"/>
+      <path d="M80 132 L140 92 L250 92 L300 132 L250 126 L196 134 L140 126 Z" style="fill:var(--sea)"/>
+      
+      <rect x="296" y="70" width="9" height="184" rx="3" style="fill:var(--sea)"/>
+      <rect x="270" y="248" width="62" height="8" rx="3" style="fill:var(--sea)"/>
+      <rect x="110" y="206" width="130" height="8" rx="3" style="fill:var(--sand)"/>
     </symbol>
     <symbol id="i-store" viewBox="0 0 400 300">
-      <rect style="fill:var(--stripe-b)" x="0" y="0" width="400" height="300" opacity=".35"/>
-      <rect style="fill:var(--line)" x="0" y="0" width="110" height="300"/>
-      <rect style="fill:var(--sky);stroke:var(--muted)" x="20" y="120" width="70" height="130" rx="4" stroke-width="3"/>
-      <rect style="fill:var(--ink)" x="96" y="56" width="22" height="30" rx="8"/>
-      <path d="M110 70 L360 150 L360 170 L110 86 Z" fill="url(#stripes)"/>
-      <path style="stroke:var(--stripe-a)" d="M360 150 L360 186" stroke-width="5"/>
-      <path style="stroke:var(--ink)" d="M112 84 L250 130 M112 84 L240 112" stroke-width="4" opacity=".5"/>
-      <rect style="fill:var(--line)" x="0" y="250" width="400" height="50"/>
-      <rect style="fill:var(--muted)" x="200" y="212" width="110" height="8" rx="3"/>
-      <rect style="fill:var(--muted)" x="210" y="220" width="6" height="32"/><rect style="fill:var(--muted)" x="294" y="220" width="6" height="32"/>
+      <circle cx="320" cy="70" r="40" style="fill:var(--sun)"/>
+      <rect x="0" y="0" width="96" height="300" style="fill:var(--sea)" opacity=".9"/>
+      <rect x="22" y="128" width="52" height="124" rx="4" style="fill:var(--sand)" opacity=".55"/>
+      <rect x="90" y="62" width="30" height="30" rx="8" style="fill:var(--sea)"/>
+      <path d="M118 78 L356 150 L356 166 L118 94 Z" style="fill:var(--sand)"/>
+      <path d="M356 150 L356 176" style="stroke:var(--sea)" stroke-width="6" stroke-linecap="round"/>
+      <rect x="0" y="252" width="400" height="48" style="fill:var(--sand)" opacity=".45"/>
+      <rect x="200" y="210" width="110" height="8" rx="3" style="fill:var(--sea)" opacity=".7"/>
     </symbol>
     <symbol id="i-flat" viewBox="0 0 400 300">
-      <circle style="fill:var(--sun)" cx="330" cy="60" r="22" opacity=".9"/>
-      <rect style="fill:var(--line)" x="0" y="250" width="400" height="50"/>
-      <path d="M70 110 L330 110 L310 126 L90 126 Z" fill="url(#stripes)"/>
-      <path style="stroke:var(--stripe-a)" d="M90 126 L310 126" stroke-width="5"/>
-      <path style="stroke:var(--ink)" d="M340 110 L340 252 M300 112 L340 112" stroke-width="7"/>
-      <path style="stroke:var(--ink)" d="M310 252 h60" stroke-width="7" stroke-linecap="round"/>
+      <circle cx="140" cy="78" r="44" style="fill:var(--sun)"/>
+      <rect x="0" y="252" width="400" height="48" style="fill:var(--sand)" opacity=".45"/>
+      <path d="M70 116 L330 110 L314 128 L86 132 Z" style="fill:var(--sea)"/>
+      <rect x="326" y="108" width="9" height="146" rx="3" style="fill:var(--sea)"/>
+      <rect x="300" y="248" width="62" height="8" rx="3" style="fill:var(--sea)"/>
+    </symbol>
+    <symbol id="i-sail" viewBox="0 0 400 300">
+      <circle cx="250" cy="80" r="50" style="fill:var(--sun)"/>
+      <rect x="0" y="252" width="400" height="48" style="fill:var(--sand)" opacity=".45"/>
+      <rect x="58" y="70" width="9" height="184" rx="3" style="fill:var(--sea)"/>
+      <rect x="330" y="104" width="9" height="150" rx="3" style="fill:var(--sea)"/>
+      <path d="M66 76 L334 108 L150 210 Z" style="fill:var(--sand)"/>
+      <path d="M66 120 L334 150 L210 232 Z" style="fill:var(--sea)" opacity=".9"/>
     </symbol>
     <symbol id="i-table" viewBox="0 0 400 300">
-      <rect style="fill:var(--line)" x="0" y="250" width="400" height="50"/>
-      <rect style="fill:var(--sea)" x="80" y="170" width="240" height="12" rx="4"/>
-      <rect style="fill:var(--ink)" x="100" y="182" width="10" height="68"/><rect style="fill:var(--ink)" x="290" y="182" width="10" height="68"/>
-      <rect style="fill:var(--muted)" x="60" y="214" width="80" height="8" rx="3"/><rect style="fill:var(--muted)" x="260" y="214" width="80" height="8" rx="3"/>
+      <circle cx="300" cy="80" r="40" style="fill:var(--sun)"/>
+      <rect x="0" y="252" width="400" height="48" style="fill:var(--sand)" opacity=".45"/>
+      <rect x="80" y="168" width="240" height="12" rx="4" style="fill:var(--sea)"/>
+      <rect x="100" y="180" width="10" height="72" style="fill:var(--sea)"/><rect x="290" y="180" width="10" height="72" style="fill:var(--sea)"/>
+      <rect x="56" y="212" width="80" height="8" rx="3" style="fill:var(--sand)"/><rect x="264" y="212" width="80" height="8" rx="3" style="fill:var(--sand)"/>
     </symbol>
-    <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+    <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5" fill="currentColor"/></symbol>
   </defs>
 </svg>
 
 <div class="topbar"><div class="wrap">
-  <span><b>Exclusivité Languedoc-Roussillon</b> · Parasols Scolaro &amp; stores coffre Brustor</span>
-  <span>Devis gratuit · <b>Réponse sous 48 h</b></span>
+  <span><b>Exclusivité Languedoc-Roussillon</b> · Parasols Scolaro · Voiles d'ombrage · Stores coffre Brustor</span>
+  <span>Étude gratuite · <b>Visite technique sous 48 h</b></span>
 </div></div>
 
 <header class="nav"><div class="wrap">
   <a class="logo" href="#top" aria-label="Parasolia, accueil">
-    <svg viewBox="0 0 40 40" aria-hidden="true"><path d="M4 22 Q20 2 36 22 Z" fill="url(#stripes)"/><path style="stroke:var(--sea)" d="M4 22 Q20 2 36 22" fill="none" stroke-width="2.5"/><path style="stroke:var(--ink)" d="M20 9 V36 M16 36 h8" stroke-width="2.5" stroke-linecap="round"/></svg>
-    <div><span>Parasolia</span><small>Ombre &amp; protection solaire</small></div>
+    <svg class="mark" viewBox="0 -8 156 126" aria-hidden="true"><circle cx="90" cy="24" r="30" style="fill:var(--lg-sun)"/><path d="M26 48 L150 44 L58 100 Z" style="fill:var(--lg-sand)"/><path d="M6 46 L50 18 L120 18 L156 46 L120 42 L84 46 L48 42 Z" style="fill:var(--lg-ink)"/><path d="M50 18 L48 42 M84 18 L84 46 M120 18 L120 42" style="stroke:#F7F5EE" stroke-width="1.6" opacity=".55"/><rect x="18" y="42" width="6" height="78" rx="2" style="fill:var(--lg-ink)"/><rect x="132" y="60" width="5.5" height="56" rx="2" style="fill:var(--lg-ink)"/></svg>
+    <div><span class="word">Paras<svg class="o" viewBox="0 0 40 40" aria-hidden="true"><defs><clipPath id="oc"><circle cx="20" cy="20" r="15"/></clipPath></defs><circle cx="20" cy="20" r="16.5" fill="none" style="stroke:var(--lg-ink)" stroke-width="5"/><g clip-path="url(#oc)"><circle cx="20" cy="23" r="9" style="fill:var(--lg-sun)"/><rect x="0" y="23" width="40" height="20" style="fill:var(--lg-ink)" opacity=".0"/><path d="M4 26 q4 -3 8 0 t8 0 t8 0 t8 0" fill="none" style="stroke:var(--lg-ink)" stroke-width="2.4" stroke-linecap="round"/><path d="M4 31.5 q4 -3 8 0 t8 0 t8 0 t8 0" fill="none" style="stroke:var(--lg-ink)" stroke-width="2.4" stroke-linecap="round"/></g></svg>lia</span><small>Voiles d'ombrage &amp; parasols solaires</small></div>
   </a>
   <nav class="links" aria-label="Navigation principale">
     <a href="#parasols">Parasols</a>
+    <a href="#voiles">Voiles d'ombrage</a>
     <a href="#stores">Stores coffre</a>
     <a href="#accompagnement">Accompagnement</a>
     <a href="#zone">Notre zone</a>
@@ -315,22 +374,22 @@ footer .logo small{color:color-mix(in srgb,var(--bg) 60%,transparent)}
 <section class="hero"><div class="wrap">
   <div>
     <p class="eyebrow">Distributeur exclusif · Hérault · Gard · Aude · Pyrénées-Orientales · Lozère</p>
-    <h1 style="margin-top:16px">L'ombre italienne et belge, posée <em>chez vous</em>.</h1>
-    <p class="lede">Parasolia sélectionne le meilleur de la protection solaire&nbsp;: les parasols Scolaro, fabriqués en Italie depuis 1974, et les stores bannes à coffre Brustor, conçus sur mesure en Belgique. Un seul interlocuteur vous suit du premier rendez-vous jusqu'à la livraison.</p>
+    <h1 style="margin-top:16px">L'ombre haut de gamme, taillée <em>sur mesure</em>.</h1>
+    <p class="lede">Voiles d'ombrage, parasols et stores bannes à coffre&nbsp;: Parasolia conçoit avec vous des protections solaires haut de gamme, dimensionnées pour votre terrasse. Un technicien se déplace chez vous et réalise votre étude sur mesure sous 48&nbsp;h.</p>
     <div class="ctas">
       <a class="btn btn-sun" href="#devis">Prendre rendez-vous</a>
       <a class="btn btn-ghost" href="#parasols">Voir la gamme</a>
     </div>
     <div class="brands">
-      <div><strong>Scolaro</strong>Parasols · Made in Italy</div>
-      <div><strong>Brustor</strong>Stores coffre · 100&nbsp;% belge</div>
-      <div><strong>48&nbsp;h</strong>Délai de réponse devis</div>
+      <div><strong>Sur mesure</strong>Chaque projet étudié chez vous</div>
+      <div><strong>Haut de gamme</strong>Aluminium, toiles techniques</div>
+      <div><strong>48&nbsp;h</strong>Visite technique et étude</div>
     </div>
   </div>
   <div class="hero-vis vis">
     <svg aria-hidden="true"><use href="#i-deporte"/></svg>
     <img src="https://www.scolaro-parasol.it/themes/smielement/assets/img/modules/appagebuilder/images/scolaro-parasol-ombrellone-retrattile-pagodaire-hp-01.jpg" alt="Parasol déporté Scolaro Pagodaire sur une terrasse" onerror="this.remove()">
-    <div class="badge48"><b>48h</b><span>Votre devis personnalisé<br>sous 48 heures ouvrées</span></div>
+    <div class="badge48"><b>48 h</b><span>Visite d'un technicien<br>et étude sur mesure</span></div>
   </div>
 </div></section>
 
@@ -354,7 +413,7 @@ footer .logo small{color:color-mix(in srgb,var(--bg) 60%,transparent)}
     <div class="promise">
       <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"/><path d="M14 7h7v7"/></svg></div>
       <h3>Rapport qualité-prix</h3>
-      <p>Du haut de gamme européen au juste prix, chiffré au plus près de votre projet réel.</p>
+      <p>Du haut de gamme au juste prix, chiffré au plus près de votre projet réel.</p>
     </div>
     <div class="promise">
       <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.6 13.4l-7.2 7.2a2 2 0 01-2.8 0L3 13V3h10l7.6 7.6a2 2 0 010 2.8z"/><circle cx="7.5" cy="7.5" r="1.5"/></svg></div>
@@ -362,11 +421,16 @@ footer .logo small{color:color-mix(in srgb,var(--bg) 60%,transparent)}
       <p>Vous avez un devis ailleurs pour un produit équivalent&nbsp;? Montrez-le-nous, nous nous engageons à faire mieux.</p>
     </div>
   </div>
+  <a class="promo" href="#voiles" style="text-decoration:none">
+    <svg class="p-ico" viewBox="0 0 56 44" aria-hidden="true"><path d="M4 6 L52 14 L22 40 Z" style="fill:var(--bg);stroke:var(--sun-ink)" stroke-width="2.5" stroke-linejoin="round"/><path d="M14 2 L50 26 L30 42 Z" style="fill:var(--sea)" opacity=".85"/></svg>
+    <div><b>Nouveau&nbsp;: les voiles d'ombrage sur mesure</b><p>Triangulaires, carrées, rectangulaires. Fabriquées en France, 7 coloris, posées en Languedoc-Roussillon.</p></div>
+    <span class="btn">Découvrir la gamme →</span>
+  </a>
 </div></section>
 
 <section class="block" id="parasols"><div class="wrap">
   <div class="sec-head">
-    <div><p class="eyebrow">Gamme Scolaro · Fabriqué en Italie</p><h2>Huit familles de parasols, pour chaque terrasse</h2></div>
+    <div><p class="eyebrow">Parasols haut de gamme · Sur mesure</p><h2>Huit familles de parasols, pour chaque terrasse</h2></div>
     <p>Bois ou aluminium, mât central ou déporté, pour un jardin, une piscine ou une terrasse de restaurant. Tous les modèles sont disponibles sur devis, en tailles et coloris de toile au choix.</p>
   </div>
   <div class="fam-grid">
@@ -428,10 +492,103 @@ footer .logo small{color:color-mix(in srgb,var(--bg) 60%,transparent)}
   </div>
 </div></section>
 
+<section class="block sails-sec" id="voiles"><div class="wrap">
+  <div class="sec-head">
+    <div><p class="eyebrow">Nouveau · Voiles d'ombrage sur mesure · Fabriquées en France</p><h2>La voile d'ombrage, version sur mesure</h2></div>
+    <p>Une toile tendue entre deux murs, un mât ou un arbre, et votre terrasse change de visage. Parasolia distribue en Languedoc-Roussillon une gamme de voiles fabriquées en France&nbsp;: des modèles prêts à poser et des voiles dessinées pour votre espace.</p>
+  </div>
+
+  <div class="gallery">
+      <figure class="g big"><div class="vis"><svg aria-hidden="true"><use href="#i-sail"/></svg><img loading="lazy" src="https://www.easysail.fr/themes/easy/img/easysail_voile_terrasse_1.jpg" alt="Voile d'ombrage tendue au-dessus d'une terrasse" onerror="this.remove()"></div><figcaption>Terrasse</figcaption></figure>
+      <figure class="g"><div class="vis"><svg aria-hidden="true"><use href="#i-sail"/></svg><img loading="lazy" src="https://www.easysail.fr/themes/easy/img/easysail_voile_piscine.jpg" alt="Voile d'ombrage au bord d'une piscine" onerror="this.remove()"></div><figcaption>Piscine</figcaption></figure>
+      <figure class="g big"><div class="vis"><svg aria-hidden="true"><use href="#i-sail"/></svg><img loading="lazy" src="https://www.easysail.fr/themes/easy/img/voile-ombrage-restaurant.jpg" alt="Voiles d'ombrage sur une terrasse de restaurant" onerror="this.remove()"></div><figcaption>Restaurant</figcaption></figure>
+      <figure class="g"><div class="vis"><svg aria-hidden="true"><use href="#i-sail"/></svg><img loading="lazy" src="https://www.easysail.fr/themes/easy/img/voile-ombrage-table-jardin.jpg" alt="Voile d'ombrage au-dessus d'une table de jardin" onerror="this.remove()"></div><figcaption>Jardin</figcaption></figure>
+      <figure class="g"><div class="vis"><svg aria-hidden="true"><use href="#i-sail"/></svg><img loading="lazy" src="https://www.easysail.fr/themes/easy/img/easysail_voile_ciel.jpg" alt="Voile d'ombrage vue de dessous" onerror="this.remove()"></div><figcaption>Toile tendue</figcaption></figure>
+      <figure class="g"><div class="vis"><svg aria-hidden="true"><use href="#i-sail"/></svg><img loading="lazy" src="https://www.easysail.fr/themes/easy/img/voile-blanche-terrasse.jpg" alt="Voile blanche sur une terrasse" onerror="this.remove()"></div><figcaption>Voile blanche</figcaption></figure>
+      <figure class="g"><div class="vis"><svg aria-hidden="true"><use href="#i-sail"/></svg><img loading="lazy" src="https://www.easysail.fr/themes/easy/img/toile-tendue-terrasse.jpg" alt="Toile tendue sur une terrasse" onerror="this.remove()"></div><figcaption>Terrasse couverte</figcaption></figure>
+      <figure class="g"><div class="vis"><svg aria-hidden="true"><use href="#i-sail"/></svg><img loading="lazy" src="https://www.easysail.fr/themes/easy/img/voile-ombre-jardin.jpg" alt="Voile d'ombrage sur structure de jardin" onerror="this.remove()"></div><figcaption>Structure jardin</figcaption></figure>
+      <figure class="g"><div class="vis"><svg aria-hidden="true"><use href="#i-sail"/></svg><img loading="lazy" src="https://www.easysail.fr/themes/easy/img/easysail_voile_terrasse_2.jpg" alt="Voile d'ombrage triangulaire sur terrasse" onerror="this.remove()"></div><figcaption>Triangulaire</figcaption></figure>
+      <figure class="g"><div class="vis"><svg aria-hidden="true"><use href="#i-sail"/></svg><img loading="lazy" src="https://www.easysail.fr/themes/easy/img/toile-ombre-grise.jpg" alt="Toile d'ombrage grise" onerror="this.remove()"></div><figcaption>Coloris ardoise</figcaption></figure>
+      <figure class="g"><div class="vis"><svg aria-hidden="true"><use href="#i-sail"/></svg><img loading="lazy" src="https://www.easysail.fr/themes/easy/img/voile-ombrage-triangulaire.jpg" alt="Voile d'ombrage triangulaire" onerror="this.remove()"></div><figcaption>Superposition</figcaption></figure>
+      <figure class="g"><div class="vis"><svg aria-hidden="true"><use href="#i-sail"/></svg><img loading="lazy" src="https://www.easysail.fr/themes/easy/img/easysail_triang_rouge_blanc_taupe.jpg" alt="Trois voiles triangulaires de couleurs différentes" onerror="this.remove()"></div><figcaption>Multicolore</figcaption></figure>
+  </div>
+
+  <div class="ranges">
+    <article class="range">
+      <p class="eyebrow">Gamme prête à poser</p>
+      <h3>Voiles extensibles</h3>
+      <p>Trois formes, sept formats standards, livrées avec leur kit de fixation. La toile s'étire pour se tendre parfaitement, même si vos points d'accroche ne sont pas tirés au cordeau.</p>
+      <table class="sizes"><thead><tr><th>Forme</th><th>Formats</th></tr></thead><tbody>
+        <tr><td><svg viewBox="0 0 56 44" aria-hidden="true"><path d="M4 6 L52 14 L22 40 Z" style="fill:var(--stripe-b);stroke:var(--sea)" stroke-width="2.5" stroke-linejoin="round"/></svg>Triangle</td><td>3 × 3 × 3 m · 4 × 4 × 4 m · 5 × 5 × 5 m</td></tr>
+        <tr><td><svg viewBox="0 0 56 44" aria-hidden="true"><path d="M8 6 L48 8 L46 38 L10 36 Z" style="fill:var(--stripe-b);stroke:var(--sea)" stroke-width="2.5" stroke-linejoin="round"/></svg>Carré</td><td>3 × 3 m · 4 × 4 m</td></tr>
+        <tr><td><svg viewBox="0 0 56 44" aria-hidden="true"><path d="M2 10 L54 6 L52 34 L4 38 Z" style="fill:var(--stripe-b);stroke:var(--sea)" stroke-width="2.5" stroke-linejoin="round"/></svg>Rectangle</td><td>3 × 2 m · 3 × 4,5 m</td></tr>
+      </tbody></table>
+    </article>
+    <article class="range range-hl">
+      <p class="eyebrow">Gamme sur mesure</p>
+      <h3>Votre voile, dessinée pour vous</h3>
+      <p>Forme libre, grandes portées, plusieurs voiles superposées, projets de restaurants, hôtels, campings ou rooftops&nbsp;: un bureau d'études accompagne chaque projet, de la prise de cotes à la fabrication.</p>
+      <ul class="ticks">
+        <li>Relevé des points d'accroche chez vous par votre commercial</li>
+        <li>Forme, dimensions et inclinaison calculées pour votre terrasse</li>
+        <li>Toile et coloris au choix, confection en atelier en France</li>
+        <li>Solutions particuliers et professionnels (CHR, collectivités)</li>
+      </ul>
+      <a class="btn btn-sun" href="#devis" data-prod="Voile d'ombrage sur mesure">Demander mon étude sur mesure</a>
+    </article>
+  </div>
+
+  <div class="specs">
+    <div class="spec-col">
+      <h3>Une toile technique</h3>
+      <ul class="feat">
+        <li><b>Extensible</b><span>jusqu'à +20&nbsp;% d'élasticité pour une tension parfaite</span></li>
+        <li><b>Câble élastique</b><span>invisible, cousu sur tout le pourtour pour soulager les points d'ancrage</span></li>
+        <li><b>Anti-UV</b><span>filtre 95 à 97&nbsp;% du rayonnement</span></li>
+        <li><b>Déperlante</b><span>l'eau perle et glisse sur la toile</span></li>
+        <li><b>Imputrescible</b><span>ne moisit pas, ne pourrit pas</span></li>
+        <li><b>Tient au vent</b><span>la toile encaisse les rafales sans se déformer</span></li>
+        <li><b>Lavable</b><span>passe en machine à 30&nbsp;°C</span></li>
+      </ul>
+    </div>
+    <div class="spec-col">
+      <h3>7 coloris</h3>
+      <ul class="colors"><li><span class="sw" style="background:#F4F4F1"></span>Blanc</li><li><span class="sw" style="background:#D9C7A3"></span>Sable</li><li><span class="sw" style="background:#8E7F72"></span>Taupe</li><li><span class="sw" style="background:#4A5257"></span>Ardoise</li><li><span class="sw" style="background:#2F6FA8"></span>Bleu</li><li><span class="sw" style="background:#A8C545"></span>Vert anis</li><li><span class="sw" style="background:#C2335B"></span>Framboise</li></ul>
+      <h3 style="margin-top:26px">Fixations &amp; options</h3>
+      <ul class="ticks">
+        <li><b>Kit inclus</b>&nbsp;: pinces autobloquantes, tendeurs et 2,5&nbsp;m de corde à chaque pointe</li>
+        <li><b>Mât avec ancrage au sol</b> quand il n'y a pas de mur ou d'arbre</li>
+        <li><b>Bague supplémentaire</b> pour accrocher deux voiles sur un même mât</li>
+        <li><b>Anneaux inox</b> à fixer en façade</li>
+        <li><b>Système d'accroche complémentaire</b> pour multiplier les configurations</li>
+      </ul>
+    </div>
+  </div>
+
+  <article class="guide" id="guide-voile">
+    <p class="eyebrow">Le guide Parasolia</p>
+    <h3>Bien choisir sa voile d'ombrage</h3>
+    <div class="guide-cols">
+      <div>
+        <h4>1. Partir de l'ombre recherchée</h4>
+        <p>Le soleil tourne&nbsp;: une voile placée pile au-dessus de la table ne la couvre plus à 15&nbsp;h. Votre commercial observe l'orientation de la terrasse et décale la voile vers le sud-ouest pour protéger les heures les plus chaudes.</p>
+        <h4>2. Choisir la forme</h4>
+        <p>Le triangle est le plus graphique et le plus facile à installer avec trois points. Le carré et le rectangle couvrent davantage de surface pour une table ou un salon. Deux triangles superposés à des hauteurs différentes donnent un effet architectural très apprécié.</p>
+      </div>
+      <div>
+        <h4>3. Prévoir une pente</h4>
+        <p>Une voile bien posée n'est jamais à plat&nbsp;: un point plus bas que les autres évite que la pluie stagne et donne une forme vrillée plus élégante. Comptez au moins 50&nbsp;cm d'écart entre le point le plus haut et le plus bas.</p>
+        <h4>4. Soigner les points d'accroche</h4>
+        <p>Un mur porteur, un mât scellé ou un arbre solide&nbsp;: chaque pointe doit être ancrée sur un support capable de reprendre la tension. Par vent fort ou pour l'hiver, la voile se décroche en quelques minutes et se lave en machine.</p>
+      </div>
+    </div>
+  </article>
+</div></section>
+
 <div class="awning" aria-hidden="true"></div>
 <section class="block brustor" id="stores"><div class="wrap">
   <div class="sec-head">
-    <div><p class="eyebrow">Stores bannes coffre Brustor · 100&nbsp;% belge</p><h2>Le store coffre, protégé toute l'année</h2></div>
+    <div><p class="eyebrow">Stores bannes coffre · Sur mesure</p><h2>Le store coffre, protégé toute l'année</h2></div>
     <p>Une fois replié, la toile et les bras sont entièrement à l'abri dans le coffre aluminium. Fabrication sur mesure, toile acrylique haut de gamme, moteur Somfy et capteurs vent, soleil et pluie en option.</p>
   </div>
   <div class="coffre-grid">
@@ -466,14 +623,14 @@ footer .logo small{color:color-mix(in srgb,var(--bg) 60%,transparent)}
   </div>
   <div class="steps">
     <div class="step"><div class="n">1</div><h3>Prise de rendez-vous</h3><p>En ligne ou par téléphone, au créneau qui vous arrange.</p></div>
-    <div class="step"><div class="n">2</div><h3>Visite &amp; métrage</h3><p>Conseil sur place, prise de cotes, choix des toiles et coloris.</p></div>
-    <div class="step hl"><div class="n">3</div><h3>Devis sous 48 h</h3><p>Chiffrage détaillé et transparent, sans engagement.</p></div>
-    <div class="step"><div class="n">4</div><h3>Commande &amp; suivi</h3><p>Lancement en fabrication, suivi des délais par votre conseiller.</p></div>
-    <div class="step"><div class="n">5</div><h3>Livraison</h3><p>Votre commercial vous livre et vérifie que tout est conforme.</p></div>
+    <div class="step hl"><div class="n">2</div><h3>Visite technique sous 48 h</h3><p>Un technicien vient chez vous&nbsp;: relevé des cotes, points d'ancrage, exposition.</p></div>
+    <div class="step"><div class="n">3</div><h3>Étude sur mesure</h3><p>Choix de la solution, des toiles et des coloris, chiffrage détaillé et sans engagement.</p></div>
+    <div class="step"><div class="n">4</div><h3>Fabrication &amp; suivi</h3><p>Lancement en fabrication sur mesure, suivi des délais par votre conseiller.</p></div>
+    <div class="step"><div class="n">5</div><h3>Livraison &amp; pose</h3><p>Votre commercial vous livre et vérifie que tout est conforme.</p></div>
   </div>
   <div class="contact-card">
     <div class="av" aria-hidden="true"><span>T</span><span>S</span></div>
-    <p><b>Thomas &amp; Sammy Nobels</b>, fondateurs de Parasolia. Une entreprise familiale installée dans l'Hérault, qui connaît le vent, le sel et le soleil de la côte languedocienne.</p>
+    <p><b>Thomas &amp; Samy Nobels</b>, fondateurs de Parasolia. Une entreprise familiale installée dans l'Hérault, qui connaît le vent, le sel et le soleil de la côte languedocienne.</p>
     <a class="btn btn-sun" href="#devis">Prendre rendez-vous</a>
   </div>
 </div></section>
@@ -481,7 +638,7 @@ footer .logo small{color:color-mix(in srgb,var(--bg) 60%,transparent)}
 <section class="block" id="zone" style="padding-top:24px"><div class="wrap zone">
   <div>
     <p class="eyebrow">Notre territoire</p>
-    <h2 style="font-size:clamp(32px,4.4vw,52px);font-weight:800;margin-top:10px">Tout le Languedoc-Roussillon, en exclusivité</h2>
+    <h2 style="font-size:clamp(32px,4.4vw,52px);font-weight:600;margin-top:10px">Tout le Languedoc-Roussillon, en exclusivité</h2>
     <p style="color:var(--muted);margin-top:14px;max-width:50ch">De Nîmes à Perpignan, de Sète à Mende, nous nous déplaçons chez vous pour le rendez-vous de conseil et la livraison.</p>
     <div class="depts">
       <div class="dept"><b>34</b><span>Hérault</span></div>
@@ -492,13 +649,12 @@ footer .logo small{color:color-mix(in srgb,var(--bg) 60%,transparent)}
     </div>
   </div>
   <div class="excl">
-    <div class="awning" aria-hidden="true"></div>
     <p class="eyebrow" style="margin-top:12px">Pourquoi Parasolia</p>
     <h3>Le meilleur du fabricant, le service d'un voisin</h3>
     <ul>
       <li>Distributeur exclusif Scolaro &amp; Brustor sur la région</li>
       <li>Commercial dédié du rendez-vous à la livraison</li>
-      <li>Devis gratuit, réponse garantie sous 48 h</li>
+      <li>Visite technique et étude sur mesure sous 48 h</li>
       <li>Tarif imbattable à produit équivalent</li>
       <li>Particuliers, hôtels, restaurants, campings</li>
     </ul>
@@ -508,11 +664,11 @@ footer .logo small{color:color-mix(in srgb,var(--bg) 60%,transparent)}
 <section class="block devis" id="devis"><div class="wrap">
   <div class="devis-box">
     <aside class="devis-side">
-      <p class="eyebrow" style="color:var(--sun)">Devis gratuit · Sans engagement</p>
+      <p class="eyebrow" style="color:var(--sun)">Étude gratuite · Sans engagement</p>
       <h2>Parlons de votre terrasse</h2>
-      <p>Décrivez votre projet ou choisissez directement un créneau de rendez-vous. Votre commercial dédié vous recontacte pour confirmer.</p>
+      <p>Décrivez votre projet ou choisissez directement un créneau. Nous vous rappelons pour fixer la visite d'un technicien, qui réalise votre étude sur mesure.</p>
       <p>Écrivez-nous aussi à <span class="mail">contact@parasolia.fr</span></p>
-      <div class="big48"><b>48h</b><span>pour recevoir<br>votre réponse</span></div>
+      <div class="big48"><b>48 h</b><span>Visite d'un technicien<br>et étude sur mesure</span></div>
     </aside>
     <form id="devisForm" novalidate>
       <div class="tabs" role="group" aria-label="Type de demande">
@@ -524,6 +680,7 @@ footer .logo small{color:color-mix(in srgb,var(--bg) 60%,transparent)}
         <div class="pick">
           <label><input type="checkbox" name="produit" id="p1" value="Parasol Scolaro" checked><span>Parasol Scolaro</span></label>
           <label><input type="checkbox" name="produit" id="p2" value="Store banne coffre Brustor"><span>Store coffre Brustor</span></label>
+          <label><input type="checkbox" name="produit" id="p5" value="Voile d'ombrage sur mesure"><span>Voile d'ombrage</span></label>
           <label><input type="checkbox" name="produit" id="p3" value="Accessoires"><span>Accessoires</span></label>
           <label><input type="checkbox" name="produit" id="p4" value="Projet professionnel (CHR)"><span>Projet pro (CHR)</span></label>
         </div>
@@ -540,9 +697,10 @@ footer .logo small{color:color-mix(in srgb,var(--bg) 60%,transparent)}
       </div>
       <div class="f full"><label for="msg">Votre projet</label><textarea id="msg" name="msg" placeholder="Ex. : terrasse 6 × 4 m exposée sud, je cherche un parasol déporté ou un store coffre motorisé."></textarea></div>
       <div class="form-foot">
-        <small>Réponse sous 48 h ouvrées. Vos coordonnées servent uniquement à traiter votre demande.</small>
+        <small>Un technicien vous contacte pour une visite sous 48 h ouvrées. Vos coordonnées servent uniquement à traiter votre demande.</small>
         <button class="btn btn-sun" type="submit" id="submitBtn">Envoyer ma demande</button>
       </div>
+      <input type="text" id="hp" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0">
       <div class="done" id="done" hidden role="status"></div>
     </form>
   </div>
@@ -552,17 +710,17 @@ footer .logo small{color:color-mix(in srgb,var(--bg) 60%,transparent)}
 <footer><div class="wrap">
   <div class="cols">
     <div>
-      <a class="logo" href="#top"><svg viewBox="0 0 40 40" aria-hidden="true"><path d="M4 22 Q20 2 36 22 Z" fill="url(#stripes)"/><path d="M20 9 V36 M16 36 h8" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg><div><span>Parasolia</span><small>www.parasolia.fr</small></div></a>
+      <a class="logo" href="#top" aria-label="Parasolia"><svg class="mark" viewBox="0 -8 156 126" aria-hidden="true"><circle cx="90" cy="24" r="30" style="fill:var(--lg-sun)"/><path d="M26 48 L150 44 L58 100 Z" style="fill:var(--lg-sand)"/><path d="M6 46 L50 18 L120 18 L156 46 L120 42 L84 46 L48 42 Z" style="fill:var(--lg-ink)"/><path d="M50 18 L48 42 M84 18 L84 46 M120 18 L120 42" style="stroke:#F7F5EE" stroke-width="1.6" opacity=".55"/><rect x="18" y="42" width="6" height="78" rx="2" style="fill:var(--lg-ink)"/><rect x="132" y="60" width="5.5" height="56" rx="2" style="fill:var(--lg-ink)"/></svg><div><span class="word">Paras<svg class="o" viewBox="0 0 40 40" aria-hidden="true"><defs><clipPath id="oc2"><circle cx="20" cy="20" r="15"/></clipPath></defs><circle cx="20" cy="20" r="16.5" fill="none" style="stroke:var(--lg-ink)" stroke-width="5"/><g clip-path="url(#oc2)"><circle cx="20" cy="23" r="9" style="fill:var(--lg-sun)"/><rect x="0" y="23" width="40" height="20" style="fill:var(--lg-ink)" opacity=".0"/><path d="M4 26 q4 -3 8 0 t8 0 t8 0 t8 0" fill="none" style="stroke:var(--lg-ink)" stroke-width="2.4" stroke-linecap="round"/><path d="M4 31.5 q4 -3 8 0 t8 0 t8 0 t8 0" fill="none" style="stroke:var(--lg-ink)" stroke-width="2.4" stroke-linecap="round"/></g></svg>lia</span><small>www.parasolia.fr</small></div></a>
       <p style="font-size:14px;opacity:.75;margin-top:14px;max-width:34ch">Distributeur exclusif des parasols Scolaro et des stores bannes coffre Brustor en Languedoc-Roussillon.</p>
     </div>
-    <div><h4>Produits</h4><ul><li><a href="#parasols">Parasols déportés</a></li><li><a href="#parasols">Parasols mât central</a></li><li><a href="#parasols">Grandes structures</a></li><li><a href="#stores">Stores bannes coffre</a></li></ul></div>
+    <div><h4>Produits</h4><ul><li><a href="#parasols">Parasols déportés</a></li><li><a href="#parasols">Parasols mât central</a></li><li><a href="#parasols">Grandes structures</a></li><li><a href="#voiles">Voiles d'ombrage sur mesure</a></li><li><a href="#stores">Stores bannes coffre</a></li></ul></div>
     <div><h4>Services</h4><ul><li><a href="#devis">Demande de devis</a></li><li><a href="#devis">Prise de rendez-vous</a></li><li><a href="#accompagnement">Commercial dédié</a></li><li><a href="#zone">Zone d'intervention</a></li></ul></div>
     <div><h4>Contact</h4><ul><li>contact@parasolia.fr</li><li>www.parasolia.fr</li><li>Hérault (34)</li></ul></div>
   </div>
   <div class="legal"><span>© 2026 Parasolia · Scolaro et Brustor sont des marques de leurs propriétaires respectifs.</span><span>Mentions légales · Confidentialité</span></div>
 </div></footer>
 
-<div class="mobile-cta"><a class="btn btn-ghost" href="#parasols">La gamme</a><a class="btn btn-sun" href="#devis">Devis 48 h</a></div>
+<div class="mobile-cta"><a class="btn btn-ghost" href="#parasols">La gamme</a><a class="btn btn-sun" href="#devis">Étude 48 h</a></div>
 
 <script>
 (function(){
@@ -582,9 +740,10 @@ footer .logo small{color:color-mix(in srgb,var(--bg) 60%,transparent)}
   // pré-sélection du produit depuis les cartes
   document.querySelectorAll('[data-prod]').forEach(a=>a.addEventListener('click',()=>{
     const p=a.dataset.prod;
-    const store=/store/i.test(p);
-    document.getElementById('p1').checked=!store;
+    const store=/store/i.test(p), voile=/voile/i.test(p);
+    document.getElementById('p1').checked=!store&&!voile;
     document.getElementById('p2').checked=store;
+    document.getElementById('p5').checked=voile;
     const msg=document.getElementById('msg');
     if(!msg.value) msg.value='Je suis intéressé(e) par : '+p+'. ';
   }));
@@ -597,12 +756,36 @@ footer .logo small{color:color-mix(in srgb,var(--bg) 60%,transparent)}
     let bad=null;
     req.forEach(id=>{const el=document.getElementById(id);const ok=el.value.trim()!==''&&(id!=='email'||/.+@.+\..+/.test(el.value));el.style.borderColor=ok?'':'#C2410C';if(!ok&&!bad)bad=el;});
     if(bad){bad.focus();done.hidden=false;done.innerHTML='Il manque une information : merci de compléter le champ surligné.';return;}
-    const nom=document.getElementById('nom').value.trim().split(' ')[0];
-    done.hidden=false;
-    done.innerHTML=mode==='rdv'
-      ? '<b>Merci '+nom.replace(/[<>&]/g,'')+' !</b> Votre demande de rendez-vous est prête. Votre commercial dédié vous rappelle sous 48 h pour confirmer le créneau.'
-      : '<b>Merci '+nom.replace(/[<>&]/g,'')+' !</b> Votre demande de devis est prête. Vous recevrez votre réponse sous 48 h ouvrées.';
-    // À la mise en ligne sur parasolia.fr : brancher ici l'envoi (Formspree, Netlify Forms ou e-mail).
+    if(document.getElementById('hp').value) return; // anti-spam
+    const v=id=>document.getElementById(id).value.trim();
+    const nom=v('nom').split(' ')[0].replace(/[<>&]/g,'');
+    const produits=[...form.querySelectorAll('input[name=produit]:checked')].map(i=>i.value).join(', ')||'Non précisé';
+    const data={
+      _subject:(mode==='rdv'?'Demande de RDV':'Demande de devis')+' – '+v('nom')+' ('+v('cp')+')',
+      _template:'table', _captcha:'false', _replyto:v('email'),
+      'Type':mode==='rdv'?'Prise de rendez-vous':'Demande de devis',
+      'Produits':produits,'Nom':v('nom'),'Téléphone':v('tel'),'E-mail':v('email'),'Code postal':v('cp'),
+      'Date souhaitée':mode==='rdv'?(v('date')||'Non précisée'):'-',
+      'Créneau':mode==='rdv'?v('creneau'):'-',
+      'Projet':v('msg')||'-'
+    };
+    submit.disabled=true; submit.textContent='Envoi en cours…';
+    done.hidden=true;
+    fetch('https://formsubmit.co/ajax/contact@parasolia.fr',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(data)})
+      .then(r=>r.json().then(j=>({ok:r.ok&&String(j.success)!=='false'})))
+      .then(({ok})=>{
+        if(!ok) throw new Error();
+        done.hidden=false;
+        done.innerHTML=mode==='rdv'
+          ? '<b>Merci '+nom+' !</b> Votre demande de rendez-vous est bien envoyée. Nous vous rappelons rapidement pour confirmer la visite de votre technicien, sous 48 h.'
+          : '<b>Merci '+nom+' !</b> Votre demande est bien envoyée. Un technicien vous contacte pour une visite et une étude sur mesure sous 48 h ouvrées.';
+        form.querySelectorAll('input:not([type=checkbox]),textarea').forEach(el=>{if(el.id!=='hp')el.value='';});
+      })
+      .catch(()=>{
+        done.hidden=false;
+        done.innerHTML='L\'envoi n\'a pas abouti. Réessayez dans un instant ou écrivez-nous directement à <b>contact@parasolia.fr</b>.';
+      })
+      .finally(()=>{submit.disabled=false;setMode(mode);});
   });
 })();
 </script>
