@@ -23,7 +23,7 @@
     <image:image><image:loc>https://www.parasolia.fr/store-coffre-lambrequin-deroulant-terrasse.jpg</image:loc></image:image>
     <image:image><image:loc>https://www.parasolia.fr/store-double-pente-deploye-dessus-terrasse-restaurant.jpg</image:loc></image:image>
     <image:image><image:loc>https://www.parasolia.fr/store-jour-nuit-salon.jpg</image:loc></image:image>
-    <image:image><image:loc>https://www.parasolia.fr/store-plisse-fenetre-cuisine.jpg</image:loc></image:image>
+    <image:image><image:loc>https://www.parasolia.fr/store-plisse-toile-beige.jpg</image:loc></image:image>
     <image:image><image:loc>https://www.parasolia.fr/store-venitien-bois-fenetre-cuisine.jpg</image:loc></image:image>
     <image:image><image:loc>https://www.parasolia.fr/stores-californiens-lames-verticales-salon.jpg</image:loc></image:image>
     <image:image><image:loc>https://www.parasolia.fr/stores-enrouleurs-coffre-grandes-baies-vitrees.jpg</image:loc></image:image>
@@ -143,7 +143,7 @@
     <loc>https://www.parasolia.fr/stores-plisses.html</loc>
     <lastmod>2026-10-13</lastmod>
     <priority>0.8</priority>
-    <image:image><image:loc>https://www.parasolia.fr/store-plisse-fenetre-cuisine.jpg</image:loc></image:image>
+    <image:image><image:loc>https://www.parasolia.fr/store-plisse-toile-beige.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://www.parasolia.fr/stores-venitiens.html</loc>
@@ -180,5 +180,10 @@
     <lastmod>2026-10-13</lastmod>
     <priority>0.8</priority>
     <image:image><image:loc>https://www.parasolia.fr/stores-zip-exterieurs-baies-maison.jpg</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://www.parasolia.fr/mentions-legales.html</loc>
+    <lastmod>2026-10-14</lastmod>
+    <priority>0.3</priority>
   </url>
 </urlset>

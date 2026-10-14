@@ -398,3 +398,4 @@ footer .logo{--lg-ink:var(--bg)}
 .vis>a>img{width:100%;height:100%;object-fit:cover;display:block}
 h3 a.tl{color:inherit;text-decoration:none}
 h3 a.tl:hover{text-decoration:underline}
+@media (min-width:901px){.promise:not(.big){grid-column:span 3}}
